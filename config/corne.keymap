@@ -35,7 +35,7 @@
                         display-name = "Base";
                         bindings = <
    &mt GRAVE TILDE &kp Q       &kp W      &kp F       &kp P        &kp B   &kp J &kp L        &kp U        &kp Y        &mt COLON SEMI  &mt PIPE BSLH
-   &kp BSPC        &mt LMETA A &mt LALT R &mt LCTRL S &mt LSHIFT T &kp G   &kp M &mt LSHIFT N &mt LCTRL E  &mt LALT I   &mt LMETA O     &mt SQT DQT
+   &kp BSPC        &mt LMETA A &mt LALT R &mt LCTRL S &mt LSHIFT T &kp G   &kp M &mt LSHIFT N &mt LCTRL E  &mt LALT I   &mt LMETA O     &mt DQT SQT
    &kp ESC         &kp Z       &kp X      &kp C       &kp D        &kp V   &kp K &kp H        &mt LT COMMA &mt GT DOT   &mt QMARK FSLH  &tog 1
                 &kp TAB &mo 2 &kp SPACE                               &kp RET &mo 3 &kp RALT
                         >;
@@ -48,10 +48,10 @@
 //                                        | GUI | LWR | SPC |          | ENT | RSE  | ALT |
                         display-name = "MAC";
                         bindings = <
-   &mt GRAVE TILDE &kp Q       &kp W       &kp F       &kp P        &kp B   &kp J &kp L        &kp U        &kp Y        &mt COLON SEMI  &mt PIPE BSLH
-   &kp BSPC        &mt LALT A  &mt LMETA R &mt LCTRL S &mt LSHIFT T &kp G   &kp M &mt LSHIFT N &mt LCTRL E  &mt LMETA I  &mt LALT  O     &mt SQT DQT
-   &kp ESC         &kp Z       &kp X       &kp C       &kp D        &kp V   &kp K &kp H        &mt LT COMMA &mt GT DOT   &mt QMARK FSLH  &tog 1
-                &kp LGUI &mo 2 &kp SPACE                                          &kp RET &mo 3 &kp RALT
+   &trans &trans      &trans      &trans &trans &trans &trans &trans &trans &trans      &trans     &trans
+   &trans &mt LALT A  &mt LMETA R &trans &trans &trans &trans &trans &trans &mt LMETA I &mt LALT O &trans  
+   &trans &trans      &trans      &trans &trans &trans &trans &trans &trans &trans      &trans     &trans
+                  &trans &trans &trans                                &trans &trans &trans  
                         >;
                 };
                 lower_layer {
