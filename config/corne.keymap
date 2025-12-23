@@ -12,9 +12,9 @@
 // Define Layers
 #define BASE 0
 #define MAC 1
-#define NUMBERS 2
-#define SYMBOLS 3
-#define GAME 4
+#define GAME 2
+#define NUMBERS 3
+#define SYMBOLS 4
 
 / {
     behaviors {
@@ -71,7 +71,22 @@
                         >;
                 };
 
-                number_layer { // 2
+                game_layer { // 2
+// -----------------------------------------------------------------------------------------
+// |  |  |  |  |  |  |      |  |  |  |  |  |  |
+// |  |  |  |  |  |  |      |  |  |  |  |  |  |
+// |  |  |  |  |  |  |      |  |  |  |  |  |  |
+//     |  |  |  |              |  |  |  |
+                        display-name = "Game";
+                        bindings = <
+   &trans     &kp Q  &kp W  &kp E  &kp R &kp T      &kp Y &kp U &kp I &kp O &kp P &trans
+   &trans     &kp A  &kp S  &kp D  &kp F &kp G      &kp H &kp J &kp K &kp L &trans &trans
+   &kp LSHIFT &trans &trans &trans &kp V &kp B      &kp N &kp M &trans &trans &trans &to BASE
+                   &kp LCTRL &trans &trans             &trans &trans &trans
+                        >;
+                };
+
+                number_layer { // 3
 // -----------------------------------------------------------------------------------------
 // |   |       |     |     |     |     |      |  | * 7 | & 8 | ~ 9 |  |  |
 // |   | BT1   | BT2 | BT3 | BT4 | BT5 |      |  | $ 4 | % 5 | ^ 6 |  |  |
@@ -86,7 +101,7 @@
                         >;
                 };
 
-                symbols_layer {  // 3
+                symbols_layer {  // 4
 // -----------------------------------------------------------------------------------------
 // |  |  |  |  |  |  |      |  |  |  |  |  |  |
 // |  |  |  |  |  |  |      |  |  |  |  |  |  |
@@ -101,20 +116,6 @@
                         >;
                 };
 
-                game_layer { // 4
-// -----------------------------------------------------------------------------------------
-// |  |  |  |  |  |  |      |  |  |  |  |  |  |
-// |  |  |  |  |  |  |      |  |  |  |  |  |  |
-// |  |  |  |  |  |  |      |  |  |  |  |  |  |
-//     |  |  |  |              |  |  |  |
-                        display-name = "Game";
-                        bindings = <
-   &trans     &kp Q  &kp W  &kp E  &kp R &kp T      &kp Y &kp U &kp I &kp O &kp P &trans
-   &trans     &kp A  &kp S  &kp D  &kp F &kp G      &kp H &kp J &kp K &kp L &trans &trans
-   &kp LSHIFT &trans &trans &trans &kp V &kp B      &kp N &kp M &trans &trans &trans &to BASE
-                   &kp LCTRL &trans &trans             &trans &trans &trans
-                        >;
-                };
 
                 empty_layer { // 5
 // -----------------------------------------------------------------------------------------
