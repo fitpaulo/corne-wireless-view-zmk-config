@@ -44,7 +44,7 @@
                         bindings = <
    &mt TILDE GRAVE &kp Q       &kp W      &kp F       &kp P        &kp B   &kp J &kp L        &kp U        &kp Y        &mt COLON SEMI  &mt PIPE BSLH
    &kp BSPC        &mt LMETA A &mt LALT R &mt LCTRL S &mt LSHIFT T &kp G   &kp M &mt LSHIFT N &mt LCTRL E  &mt LALT I   &mt LMETA O     &mt DQT SQT
-   &kp tog 4       &kp Z       &kp X      &kp C       &kp D        &kp V   &kp K &kp H        &mt LT COMMA &mt GT DOT   &mt QMARK FSLH  &tog 1
+   &tog 4          &kp Z       &kp X      &kp C       &kp D        &kp V   &kp K &kp H        &mt LT COMMA &mt GT DOT   &mt QMARK FSLH  &tog 1
                 &kp TAB &lt 2 ESC &kp SPACE                               &kp RET &mo 3 &mt UNDER MINUS
                         >;
                 };
@@ -71,7 +71,7 @@
                         display-name = "Keypad";
                         bindings = <
    &trans       &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &trans &mt ASTRK N7  &mt AMPS N8  &mt TILDE N9 &trans    &trans
-   &mt DEL BSPC &kp F1       &kp F2       &kp F3       &kp F4       &kp F5         &trans &mt DOLLAR N4 &mt PRCNT N5 &mt CARET N6 &kp EQUAL &trans
+   &mt DEL BSPC &mt F11 F1   &mt F12 F2   &kp F3       &kp F4       &kp F5         &trans &mt DOLLAR N4 &mt PRCNT N5 &mt CARET N6 &kp EQUAL &trans
    &bt BT_CLR   &kp F6       &kp F7       &kp F8       &kp F9       &kp F10        &trans &mt EXCL N1   &mt AT N2    &mt POUND N3 &kp PLUS  &trans
                           	        &trans     &trans   &trans                 &trans  &kp N0   &trans
                         >;
