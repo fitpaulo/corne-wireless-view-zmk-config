@@ -1,4 +1,4 @@
-/*
+
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
@@ -153,26 +153,6 @@
    &trans &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans &trans
                      &trans &trans &trans           &trans &trans &trans
                         >;
-                };
-
-                extra_1 {
-                        status = "reserved";
-                };
-
-                extra_2 {
-                        status = "reserved";
-                };
-
-                extra_3 {
-                        status = "reserved";
-                };
-
-                extra_4 {
-                        status = "reserved";
-                };
-
-                extra_5 {
-                        status = "reserved";
                 };
         };
 };
