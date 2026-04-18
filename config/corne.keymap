@@ -13,8 +13,10 @@
 #define BASE 0
 #define MAC 1
 #define GAME 2
-#define NUMBERS 3
-#define SYMBOLS 4
+#define GAMEMAC 3
+#define NUMBERS 4
+#define SYMBOLS 5
+
 
 / {
     behaviors {
@@ -34,6 +36,12 @@
             bindings = <&mo>, <&kp>;
             display-name = "Layer-Tap";
         };
+        td: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&to GAME>, <&to GAMEMAC>
+        }
     };
 };
 
@@ -51,7 +59,7 @@
                         bindings = <
    &mt TILDE GRAVE &kp Q       &kp W      &kp F       &kp P        &kp B   &kp J &kp L        &kp U        &kp Y        &mt COLON SEMI  &mt PIPE BSLH
    &kp BSPC        &mt LMETA A &mt LALT R &mt LCTRL S &mt LSHIFT T &kp G   &kp M &mt LSHIFT N &mt LCTRL E  &mt LALT I   &mt LMETA O     &mt DQT SQT
-   &to GAME          &kp Z       &kp X      &kp C       &kp D        &kp V   &kp K &kp H        &mt LT COMMA &mt GT DOT   &mt QMARK FSLH  &tog MAC
+   &td0            &kp Z       &kp X      &kp C       &kp D        &kp V   &kp K &kp H        &mt LT COMMA &mt GT DOT   &mt QMARK FSLH  &tog MAC
                 &kp TAB &lt NUMBERS ESC &kp SPACE                               &kp RET &mo SYMBOLS &mt UNDER MINUS
                         >;
                 };
@@ -86,7 +94,22 @@
                         >;
                 };
 
-                number_layer { // 3
+                game_layer_colemak { // 3
+// -----------------------------------------------------------------------------------------
+// | GRAVE TILDE |  Q        |  W     |  F       |  P        |  B  |   |  J  |  L         |  U       |  Y      |  :  ;       | \ |  |
+// | BKSP        |  LMETA A  | LALT R | LCTRL S  | LSHIFT T  |  G  |   |  M  | LSHIFT N   | LCTRL E  | LALT I  | LMETA O     |  " '  |
+// | Layer GAME  |  Z        |  X     |  C       |  D        |  V  |   |  K  |  H         |  < ,     |  > .    |  ?  /       | Layer Mac  |
+//                          | TAB | LWR ESC | SPC |                  | ENT | RSE  | _ - |
+                        display-name = "GAMEMAC";
+                        bindings = <
+   &kp TILDE   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L &kp U     &kp Y   &kp SEMI  &kp ESC
+   &kp BSPC    &kp A &kp R &kp S &kp T &kp G   &kp M &kp N &kp E     &kp I   &kp O     &kp SQT
+   &kp LSHIFT  &kp Z &kp X &kp C &kp D &kp V   &kp K &kp H &kp COMMA &kp DOT &kp FSLH  &to BASE
+         &kp TAB &mo NUMBERS &kp SPACE                   &kp RET &mo SYMBOLS &kp MINUS
+                        >;
+                };
+
+                number_layer { // 4
 // -----------------------------------------------------------------------------------------
 // |   |       |     |     |     |     |      |  | * 7 | & 8 | ~ 9 |  |  |
 // |   | BT1   | BT2 | BT3 | BT4 | BT5 |      |  | $ 4 | % 5 | ^ 6 |  |  |
@@ -101,7 +124,7 @@
                         >;
                 };
 
-                symbols_layer {  // 4
+                symbols_layer {  // 5
 // -----------------------------------------------------------------------------------------
 // |  |  |  |  |  |  |      |  |  |  |  |  |  |
 // |  |  |  |  |  |  |      |  |  |  |  |  |  |
@@ -117,7 +140,7 @@
                 };
 
 
-                empty_layer { // 5
+                empty_layer { // 6
 // -----------------------------------------------------------------------------------------
 // |  |  |  |  |  |  |      |  |  |  |  |  |  |
 // |  |  |  |  |  |  |      |  |  |  |  |  |  |
@@ -145,6 +168,10 @@
                 };
 
                 extra_4 {
+                        status = "reserved";
+                };
+
+                extra_5 {
                         status = "reserved";
                 };
         };
